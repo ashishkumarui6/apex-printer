@@ -1,0 +1,74 @@
+.navbar {
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 0 1rem ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.right ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.right li {
+  color: #000;
+  margin-bottom: 3px;
+}
+.right li {
+  position: relative;
+  list-style: none; /* Agar bullet points nahi chahiye to */
+}
+
+.right li::before {
+  content: '';
+  position: absolute;
+  bottom: 0; /* bottom me dikhane ke liye */
+  left: 0;
+  width: 70%;
+  height: 3px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.right li:hover::before {
+  border-bottom-color: red;
+    margin-left: 12px;
+}
+
+
+
+.right a {
+    color: #222222;
+    font-size: 15px;
+    line-height: 80px;
+    margin: 2px 16px;
+    text-transform: uppercase;
+}
+
+.right a{
+    text-decoration: none;
+}
+
+.right a:hover {
+  color: #333;
+}

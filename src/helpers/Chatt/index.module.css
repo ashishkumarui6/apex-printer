@@ -1,0 +1,26 @@
+.chatt{
+    width: 65px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 17px;
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+}
+
+.chatt a{
+    color: #265b99;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+    outline: 0 !important;
+    filter: hue-rotate(303deg);
+}
+
+.chatt a img{
+        vertical-align: middle;
+        display: flex;
+        max-width: 90%;
+}
