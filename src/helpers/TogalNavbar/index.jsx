@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoHome } from "react-icons/io5";
+import { Link, useLocation } from "react-router";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import styles from "./index.module.css";
-import { Link } from "react-router";
-const Navbar = () => {
+
+const TogalNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.logo}>Apex Printer</div>
         </div>
-        <div className={styles.right}>
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          {isOpen ? <IoMdClose size={28} /> : <GiHamburgerMenu size={28} />}
+        </div>
+        <div className={`${styles.right} ${isOpen ? styles.show : ""}`}>
           <ul>
-            <li
-              style={{
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+            <li>
               <Link to="/">
                 <span>
-                  <IoHome size={26} />
+                  <IoHome size={22} />
                 </span>
               </Link>
             </li>
@@ -57,4 +66,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default TogalNavbar;

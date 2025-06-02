@@ -15,7 +15,7 @@ const Brochure = () => {
             </Link>
           </p>
           <div className={styles.download}>
-            <Link href={"/brochure.pdf"} download>
+            <Link to={"/brochure.pdf"} download>
               <span className={styles.icon}>
                 <FaDownload />
               </span>

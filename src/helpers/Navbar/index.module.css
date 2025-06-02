@@ -72,3 +72,34 @@
 .right a:hover {
   color: #333;
 }
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+    
+
+
+
+
+  
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+ 
+}
+
+
+
+@media (max-width: 768px) {
+
+  
+ .navbar {
+  background-color: #fff;
+  color: #000;
+  display: none;
+}
+
+}
+
