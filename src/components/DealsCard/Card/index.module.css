@@ -1,0 +1,23 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 1px 1px 18px 3px;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+.card img{
+    width: 50px;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.card h5{
+    color: #595555;
+    font-size: 15px !important;
+    text-transform: unset;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -5,9 +5,22 @@
     margin-left: auto;
 }
 
-.dealsCard ul{
+.cardGrid{
     padding: 20px 0px;
     list-style: none;
     display: flex;
     gap: 20px;
+}
+
+
+.cardItem{
+    width: 100%;
+    margin-bottom: 3px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.cardItem a{
+    color: #265b99;
+    text-decoration: none;
 }
