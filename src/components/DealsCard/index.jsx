@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./index.module.css";
-import Card from "./card";
 import graphic_img from "../../assets/graphic_img.png";
 import { Link } from "react-router";
+import Card from "./Card/Card";
 
 // Define card data
 const cards = [
