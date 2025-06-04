@@ -22,6 +22,11 @@
   color: #000;
 }
 
+.logo img{
+  width: 50%;
+  height: 60px;
+}
+
 .right ul {
   list-style: none;
   display: flex;
@@ -39,6 +44,25 @@
   list-style: none; /* Agar bullet points nahi chahiye to */
 }
 
+
+.active_li .submenu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+
+.active_li:hover .submenu {
+  display: block;
+}
+
+
 .right li::before {
   content: '';
   position: absolute;
@@ -52,7 +76,6 @@
 
 .right li:hover::before {
   border-bottom-color: red;
-    margin-left: 12px;
 }
 
 
@@ -72,6 +95,8 @@
 .right a:hover {
   color: #333;
 }
+
+
 
 
 

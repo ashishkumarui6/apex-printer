@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import styles from "./index.module.css";
+import logo from "../../assets/logo.png";
 
 const TogalNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,9 @@ const TogalNavbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <div className={styles.logo}>Apex Printer</div>
+          <div className={styles.logo}>
+            <img src={logo} alt="logo" />
+          </div>
         </div>
         <div className={styles.hamburger} onClick={toggleMenu}>
           {isOpen ? <IoMdClose size={28} /> : <GiHamburgerMenu size={28} />}

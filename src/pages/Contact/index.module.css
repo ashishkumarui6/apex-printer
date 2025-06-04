@@ -1,0 +1,22 @@
+.section_contact{
+    padding: 25px 0;
+}
+
+.section_title{
+    padding: 15px 0;
+    background-color: var(--typoColor);
+    overflow: hidden;
+}
+
+.section_title{
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_form{
+    padding: 50px 0px;
+    overflow: hidden;
+}

@@ -1,0 +1,159 @@
+.contactFrom{
+    border-radius: 53px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.content{
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+}
+
+.content .left{
+    width: 41.66666667%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+
+.form{
+    padding: 25px;
+}
+.heading h5{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.heading span{
+    font-size: 9px;
+    border-top: 1px solid #9a9393;
+    padding-top: 5px;
+}
+
+.row_sheet{
+    gap: 25px;
+    display: grid;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+.row_sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Label styling */
+.row_sheet label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* Input and textarea styling */
+.row_sheet input,
+.row_sheet textarea {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row_sheet input:focus,
+.row_sheet textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Textarea resizes only vertically */
+.row_sheet textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Button styling */
+.row_sheet button {
+  align-self: flex-start;
+
+  width: 100%;
+  padding: 12px 24px;
+  background-color: var(--typoColor);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.row_sheet button:hover {
+  background-color: #0056b3;
+}
+
+
+.content .right{
+    width: 58.33333333%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.social_media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.meadia_icons{
+    display: flex;
+    list-style: none;
+    background: #265b99;
+    gap: 20px;
+    padding: 8px 12px;
+    border-radius: 24px 0px 0px 24px;
+    box-shadow: rgb(0 0 0 / 50%) -1px 4px 9px 0px;
+}
+
+.meadia_icons{
+    color: #555555;
+    font-size: 15px !important;
+}
+
+.heading{
+        margin: 20px 0px 39px 0px;
+}
+
+.heading h5{
+    font-size: 28px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+}
+
+.heading p{
+    text-align: justify;
+    padding-right: 33px;
+    font-size: 12px !important;
+}
+
+.intro_content{
+        padding: 0px 45px 0px 0px;
+}

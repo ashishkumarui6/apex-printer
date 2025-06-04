@@ -3,6 +3,7 @@ import MultiCarousel from "../../shared/Carousel";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import DealsCard from "../../components/DealsCard";
+import slide_1 from "../../assets/slide_1.jpg";
 
 const Home = () => {
   const responsive = {
@@ -70,19 +71,36 @@ const Home = () => {
         }
       >
         <div style={{ width: "100%", height: "400px", background: "red" }}>
-          Item 1
+          <img
+            src={slide_1}
+            alt="slide_1"
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
         <div style={{ width: "100%", height: "400px", background: "blue" }}>
-          Item 2
+          <img
+            src={slide_1}
+            alt="slide_1"
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
         <div style={{ width: "100%", height: "400px", background: "green" }}>
-          Item 3
+          <img
+            src={slide_1}
+            alt="slide_1"
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
         <div style={{ width: "100%", height: "400px", background: "yellow" }}>
-          Item 4
+          <img
+            src={slide_1}
+            alt="slide_1"
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
       </MultiCarousel>
       <DealsCard />
+      <section></section>
     </>
   );
 };
