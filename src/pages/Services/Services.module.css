@@ -1,0 +1,712 @@
+/* ================= GLOBAL ================= */
+
+.servicesPage {
+  --primary: #ff4d00;
+  --primary-dark: #d93600;
+  --dark: #111827;
+  --text: #4b5563;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --border: #e5e7eb;
+
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+
+/* ================= HERO ================= */
+
+.servicesHero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 77, 0, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #fff7f2, #ffffff);
+  overflow: hidden;
+}
+
+.heroCircle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.circleOne {
+  width: 420px;
+  height: 420px;
+  right: -150px;
+  top: -160px;
+  border: 70px solid rgba(255, 77, 0, 0.08);
+}
+
+.circleTwo {
+  width: 260px;
+  height: 260px;
+  left: -120px;
+  bottom: -130px;
+  background: rgba(255, 77, 0, 0.06);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 70px;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.heroText {
+  max-width: 650px;
+}
+
+.heroTag {
+  display: inline-block;
+  padding: 9px 17px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background: rgba(255, 77, 0, 0.1);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.heroText h1 {
+  margin: 0;
+  font-size: clamp(45px, 5vw, 72px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.heroText h1 span {
+  display: block;
+  color: var(--primary);
+}
+
+.heroText p {
+  max-width: 600px;
+  margin: 25px 0 30px;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.primaryBtn {
+  color: var(--white);
+  background: var(--primary);
+  box-shadow: 0 12px 25px rgba(255, 77, 0, 0.2);
+}
+
+.primaryBtn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.primaryBtn span {
+  font-size: 22px;
+}
+
+.secondaryBtn {
+  color: var(--dark);
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.secondaryBtn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+
+/* ================= HERO PRINT CARD ================= */
+
+.heroGraphic {
+  position: relative;
+  height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.printCard {
+  position: absolute;
+  width: 340px;
+  height: 410px;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(17, 24, 39, 0.2);
+}
+
+.cardBack {
+  background: #1f2937;
+  transform: rotate(10deg) translate(35px, 15px);
+}
+
+.cardMain {
+  z-index: 2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background:
+    linear-gradient(
+      135deg,
+      #111827 0%,
+      #1f2937 50%,
+      #ff4d00 50%,
+      #ff6a00 100%
+    );
+  transform: rotate(-4deg);
+}
+
+.printTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.printTop span {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.printTop small {
+  max-width: 80px;
+  text-align: right;
+  font-size: 9px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.printContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.printContent span {
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.printContent strong {
+  font-size: 48px;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.printBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.printBottom span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.servicesSection {
+  padding: 110px 0;
+  background: var(--white);
+}
+
+.sectionHeading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.sectionHeading > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.sectionHeading p {
+  margin: 15px auto 0;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.serviceCard {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: 0.35s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 77, 0, 0.4);
+  box-shadow: 0 20px 45px rgba(17, 24, 39, 0.1);
+}
+
+.serviceCard.featured {
+  color: white;
+  border-color: var(--primary);
+  background: linear-gradient(145deg, #ff4d00, #ff7200);
+  box-shadow: 0 20px 45px rgba(255, 77, 0, 0.2);
+}
+
+.serviceIcon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: #fff3ed;
+  font-size: 28px;
+}
+
+.featured .serviceIcon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.serviceCard h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.serviceCard p {
+  min-height: 95px;
+  margin: 0 0 20px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.featured p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.serviceCard a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.featured a {
+  color: white;
+}
+
+.serviceCard a span {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+
+/* ================= WHY CHOOSE US ================= */
+
+.whySection {
+  padding: 110px 0;
+  background: #f8fafc;
+}
+
+.whyWrapper {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.whyImage {
+  position: relative;
+  min-height: 480px;
+}
+
+.imageBox {
+  width: 90%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #111827 0%,
+      #1f2937 55%,
+      #ff4d00 55%
+    );
+  box-shadow: 0 25px 60px rgba(17, 24, 39, 0.18);
+}
+
+.imageContent {
+  color: white;
+  text-align: center;
+}
+
+.imageContent span {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+
+.imageContent strong {
+  display: block;
+  margin: 5px 0;
+  color: #fff;
+  font-size: 100px;
+  line-height: 0.9;
+  font-weight: 900;
+}
+
+.imageContent small {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.experienceBox {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  width: 165px;
+  padding: 25px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 16px;
+  background: var(--primary);
+  box-shadow: 0 15px 35px rgba(255, 77, 0, 0.3);
+}
+
+.experienceBox strong {
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.experienceBox span {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sectionLabel {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.whyContent h2 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.whyContent h2 span {
+  display: block;
+  color: var(--primary);
+}
+
+.whyContent > p {
+  max-width: 650px;
+  margin: 20px 0 35px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  border-radius: 50%;
+  background: #fff0e9;
+  font-weight: 900;
+}
+
+.feature h4 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+
+/* ================= PROCESS ================= */
+
+.processSection {
+  padding: 110px 0;
+  background: white;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.processItem {
+  position: relative;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.processItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+}
+
+.processNumber {
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.processItem h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+}
+
+.processItem p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .heroText {
+    margin: 0 auto;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .heroGraphic {
+    height: 430px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .whyWrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .whyImage {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .whyContent {
+    text-align: center;
+  }
+
+  .whyContent > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .servicesHero {
+    min-height: auto;
+  }
+
+  .heroContent {
+    padding: 65px 0;
+    gap: 20px;
+  }
+
+  .heroText h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .heroText p {
+    font-size: 15px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+
+  .heroGraphic {
+    height: 360px;
+    transform: scale(0.8);
+  }
+
+  .printCard {
+    width: 300px;
+    height: 360px;
+  }
+
+  .printContent strong {
+    font-size: 40px;
+  }
+
+  .servicesSection,
+  .whySection,
+  .processSection {
+    padding: 75px 0;
+  }
+
+  .sectionHeading {
+    margin-bottom: 40px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 34px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard p {
+    min-height: auto;
+  }
+
+  .whyImage {
+    min-height: 380px;
+  }
+
+  .imageBox {
+    width: 100%;
+    height: 370px;
+  }
+
+  .imageContent strong {
+    font-size: 80px;
+  }
+
+  .experienceBox {
+    right: -5px;
+    bottom: 10px;
+  }
+
+  .whyContent h2 {
+    font-size: 36px;
+  }
+
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+}

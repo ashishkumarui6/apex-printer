@@ -1,130 +1,274 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
+  width: 100%;
   background-color: #fff;
   color: #000;
+  border-bottom: 1px solid #eee;
 }
 
 .container {
   max-width: 1200px;
+  min-height: 80px;
   margin: 0 auto;
-  padding: 0 0 0 1rem ;
+  padding: 0 20px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* =========================
+   LOGO
+========================= */
+
 .left {
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
+  text-decoration: none;
 }
 
-.logo img{
-  width: 50%;
+.logo img {
+  width: 180px;
   height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   RIGHT MENU
+========================= */
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .right ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 5px;
   margin: 0;
   padding: 0;
 }
 
 .right li {
-  color: #000;
-  margin-bottom: 3px;
-}
-.right li {
   position: relative;
-  list-style: none; /* Agar bullet points nahi chahiye to */
+  list-style: none;
+  margin: 0;
 }
 
-
-.active_li .submenu{
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 0;
-  min-width: 180px;
-  z-index: 999;
-}
-
-
-.active_li:hover .submenu {
-  display: block;
-}
-
-
-.right li::before {
-  content: '';
-  position: absolute;
-  bottom: 0; /* bottom me dikhane ke liye */
-  left: 0;
-  width: 70%;
-  height: 3px;
-  border-bottom: 3px solid transparent;
-  transition: border-color 0.3s;
-}
-
-.right li:hover::before {
-  border-bottom-color: red;
-}
-
-
+/* =========================
+   MENU LINKS
+========================= */
 
 .right a {
-    color: #222222;
-    font-size: 15px;
-    line-height: 80px;
-    margin: 2px 16px;
-    text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  color: #222;
+  font-size: 15px;
+  line-height: 80px;
+
+  margin: 0 10px;
+  padding: 0 6px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
 }
 
-.right a{
-    text-decoration: none;
+/* Red underline */
+.right a::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 18px;
+
+  width: 0;
+  height: 3px;
+
+  background-color: red;
+
+  transition: width 0.3s ease;
 }
 
 .right a:hover {
   color: #333;
 }
 
-
-
-
-
-@media screen and (min-width: 1024px) and (max-width: 1200px){
-    
-
-
-
-
-  
+.right a:hover::after {
+  width: 70%;
 }
 
+/* =========================
+   DROPDOWN
+========================= */
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-
- 
+.active_li {
+  position: relative;
 }
 
+.active_li .submenu {
+  display: none;
 
+  position: absolute;
+  top: 100%;
+  left: 0;
 
-@media (max-width: 768px) {
+  min-width: 200px;
+  margin: 0;
+  padding: 8px 0;
 
-  
- .navbar {
   background-color: #fff;
-  color: #000;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+  z-index: 9999;
+}
+
+/* Show dropdown on hover */
+.active_li:hover .submenu {
+  display: block;
+}
+
+/* Dropdown items */
+.active_li .submenu li {
+  width: 100%;
+}
+
+.active_li .submenu a {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  line-height: 40px;
+  margin: 0;
+  padding: 0 15px;
+
+  font-size: 14px;
+  text-transform: capitalize;
+
+  color: #222;
+}
+
+/* Remove main underline from dropdown */
+.active_li .submenu a::after {
   display: none;
 }
 
+.active_li .submenu a:hover {
+  background-color: #f5f5f5;
+  color: red;
 }
 
+
+/* =========================
+   1024px - 1200px
+========================= */
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .right a {
+    font-size: 14px;
+    margin: 0 6px;
+    padding: 0 4px;
+  }
+}
+
+
+/* =========================
+   TABLET
+   769px - 1023px
+========================= */
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .logo img {
+    width: 140px;
+    height: 55px;
+  }
+
+  .right a {
+    font-size: 13px;
+    margin: 0 4px;
+    padding: 0 3px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   0 - 768px
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+    display: block;
+  }
+
+  .container {
+    min-height: 70px;
+    padding: 0 15px;
+  }
+
+  .logo img {
+    width: 140px;
+    height: 50px;
+  }
+
+  /*
+    IMPORTANT:
+    Agar React/JS se mobile menu open/close
+    kar rahe hain, .right ko completely display:none
+    na karein unless aapke paas toggle className hai.
+  */
+
+  .right {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: block;
+    display: none;
+  }
+}

@@ -1,0 +1,404 @@
+/* ================= RESET ================= */
+
+.contactPage {
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* ================= HERO ================= */
+
+.contactHero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #111827 0%, #182848 55%, #243b55 100%);
+  overflow: hidden;
+}
+
+.heroShapeOne {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: -100px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.18);
+}
+
+.heroShapeTwo {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  left: -100px;
+  bottom: -130px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.12);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 90px 0;
+}
+
+.heroBadge,
+.formBadge {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 30px;
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.heroContent h1 {
+  margin: 22px 0 18px;
+  color: #fff;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.heroContent h1 span {
+  display: block;
+  color: #ffc107;
+}
+
+.heroContent p {
+  max-width: 650px;
+  color: #d7deea;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.heroButton,
+.ctaButton {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  background: #ffc107;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.heroButton:hover,
+.ctaButton:hover {
+  transform: translateY(-3px);
+  background: #fff;
+}
+
+/* ================= INFO ================= */
+
+.infoSection {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.sectionHeading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.sectionHeading span {
+  color: #e4a900;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sectionHeading h2 {
+  margin: 12px 0;
+  font-size: 42px;
+  color: #172033;
+}
+
+.sectionHeading p {
+  color: #687386;
+  line-height: 1.7;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.infoCard {
+  padding: 32px 22px;
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e9edf3;
+  transition: 0.3s;
+}
+
+.infoCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(20, 30, 50, 0.1);
+}
+
+.iconBox {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #fff4cf;
+  color: #e5a900;
+  font-size: 23px;
+}
+
+.infoCard h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.infoCard p {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: #27354b;
+}
+
+.infoCard span {
+  color: #7b8493;
+  font-size: 13px;
+}
+
+/* ================= FORM ================= */
+
+.formSection {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.formWrapper {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.formLeft h2 {
+  margin: 20px 0;
+  font-size: 46px;
+  line-height: 1.15;
+}
+
+.formLeft h2 span {
+  color: #e4a900;
+}
+
+.formLeft > p {
+  color: #697386;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.formFeatures {
+  margin-top: 35px;
+}
+
+.formFeatures div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.formFeatures strong {
+  color: #e4a900;
+  font-size: 18px;
+}
+
+.formFeatures span {
+  font-weight: 600;
+}
+
+.contactForm {
+  padding: 38px;
+  border-radius: 20px;
+  background: #f8fafc;
+  box-shadow: 0 20px 60px rgba(25, 35, 55, 0.08);
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  margin-bottom: 8px;
+  color: #29354a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dce2ea;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #29354a;
+  font-size: 14px;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.12);
+}
+
+.inputGroup textarea {
+  resize: vertical;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #172033;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitButton span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.submitButton:hover {
+  background: #ffc107;
+  color: #172033;
+}
+
+/* ================= CTA ================= */
+
+.ctaSection {
+  padding: 30px 0 90px;
+}
+
+.ctaBox {
+  padding: 55px 60px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: linear-gradient(120deg, #172033, #263b5d);
+}
+
+.ctaBox span {
+  color: #ffc107;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ctaBox h2 {
+  margin: 12px 0 8px;
+  color: #fff;
+  font-size: 36px;
+}
+
+.ctaBox p {
+  margin: 0;
+  color: #c8d0dc;
+  line-height: 1.7;
+}
+
+.ctaButton {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formWrapper {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 650px) {
+  .contactHero {
+    min-height: 450px;
+  }
+
+  .heroContent {
+    padding: 70px 0;
+  }
+
+  .heroContent h1 {
+    font-size: 43px;
+  }
+
+  .infoSection,
+  .formSection {
+    padding: 70px 0;
+  }
+
+  .sectionHeading h2,
+  .formLeft h2 {
+    font-size: 34px;
+  }
+
+  .infoGrid,
+  .inputRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm {
+    padding: 25px;
+  }
+
+  .ctaBox {
+    padding: 35px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ctaBox h2 {
+    font-size: 28px;
+  }
+}

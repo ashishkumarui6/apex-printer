@@ -1,30 +1,34 @@
 import React from "react";
-import { Link } from "react-router";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 import styles from "./index.module.css";
 
 const Brochure = () => {
   return (
-    <>
-      <div className={styles.brochure}>
-        <div className={styles.content}>
-          <p>
-            <span>Call Us For Free Quote Consultant</span>
-            <Link>
-              <span>+91-94533-85293</span>
-            </Link>
-          </p>
-          <div className={styles.download}>
-            <Link to={"/brochure.pdf"} download>
-              <span className={styles.icon}>
-                <FaDownload />
-              </span>
-              <span className={styles.text}>Download Brochure</span>
-            </Link>
-          </div>
+    <section className={styles.brochure}>
+      <div className={styles.content}>
+        {/* Right Button */}
+        <div className={styles.downloadBox}>
+          <a
+            href="/brochure.pdf"
+            download="Apex-Printer-Brochure.pdf"
+            className={styles.downloadBtn}
+          >
+            <span className={styles.icon}>
+              <FaDownload />
+            </span>
+
+            <span className={styles.text}>
+              <strong>Download Brochure</strong>
+              <small>Get our latest brochure</small>
+            </span>
+
+            <span className={styles.arrow}>
+              <FaArrowRight />
+            </span>
+          </a>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -9,7 +9,9 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.logo}>
-            <img src={logo} alt="logo" />
+            <Link to={"/"}>
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
         </div>
         <div className={styles.right}>
@@ -23,9 +25,7 @@ const Navbar = () => {
               }}
             >
               <Link to="/">
-                <span>
-                  <IoHome size={26} />
-                </span>
+                <span>HOME</span>
               </Link>
             </li>
             <li className={styles.active_li}>
@@ -34,16 +34,16 @@ const Navbar = () => {
               </Link>
               <ul className={styles.submenu}>
                 <li>
-                  <Link to="/about/mission">About Us</Link>
+                  <Link to="/printing">About Us</Link>
                 </li>
                 <li>
-                  <Link to="/about/team">Team</Link>
+                  <Link to="/printing">Team</Link>
                 </li>
                 <li>
-                  <Link to="/about/careers">Careers</Link>
+                  <Link to="/printing">Careers</Link>
                 </li>
                 <li>
-                  <Link to="/about/careers">E-Brochure</Link>
+                  <Link to="/printing">E-Brochure</Link>
                 </li>
               </ul>
             </li>
@@ -53,13 +53,13 @@ const Navbar = () => {
               </Link>
               <ul className={styles.submenu}>
                 <li>
-                  <Link to="/services/printing">Printing</Link>
+                  <Link to="/printing">Printing</Link>
                 </li>
                 <li>
-                  <Link to="/services/design">Design</Link>
+                  <Link to="/printing">Design</Link>
                 </li>
                 <li>
-                  <Link to="/services/delivery">Delivery</Link>
+                  <Link to="/printing">Delivery</Link>
                 </li>
               </ul>
             </li>

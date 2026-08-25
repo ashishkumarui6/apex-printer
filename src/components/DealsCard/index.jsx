@@ -4,9 +4,13 @@ import graphic_img from "../../assets/graphic_img.png";
 import { Link } from "react-router";
 import Card from "./Card/Card";
 
-// Define card data
 const cards = [
-  { img: graphic_img, title: "Deal 1", name: "Flex Board", link: "/flexBoard" },
+  {
+    img: graphic_img,
+    title: "Deal 1",
+    name: "Flex Board",
+    link: "/flexBoard",
+  },
   {
     img: graphic_img,
     title: "Deal 2",
@@ -37,10 +41,10 @@ const DealsCard = () => {
   return (
     <div className={styles.dealsCard}>
       <ul className={styles.cardGrid}>
-        {cards.map((it, ind) => (
-          <li key={ind} className={styles.cardItem}>
-            <Link key={ind} to={it.link}>
-              <Card img={it.img} title={it.title} name={it.name} />
+        {cards.map((item) => (
+          <li key={item.link} className={styles.cardItem}>
+            <Link to={item.link} className={styles.cardLink}>
+              <Card img={item.img} title={item.title} name={item.name} />
             </Link>
           </li>
         ))}

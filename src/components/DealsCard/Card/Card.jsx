@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./index.module.css";
+
 const Card = ({ img, name, title }) => {
   return (
     <div className={styles.card}>
-      <img src={img} alt={title} />
+      <img src={img} alt={title || name} />
       <h5 className={styles.name}>{name}</h5>
     </div>
   );

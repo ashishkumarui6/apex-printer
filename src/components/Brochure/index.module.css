@@ -1,56 +1,329 @@
+/* ==============================
+   BROCHURE SECTION
+============================== */
+
 .brochure {
-  background-color: var(--typoColor);
-  color: #ffffff;
-  padding: 0px 24px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 28px 20px;
+  background: linear-gradient(
+    135deg,
+    #111827 0%,
+    #1e3a8a 50%,
+    #2563eb 100%
+  );
+}
+
+/* ==============================
+   BACKGROUND EFFECTS
+============================== */
+
+.backgroundCircle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: 8%;
+  top: -180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.backgroundCircleTwo {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 20%;
+  bottom: -130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* ==============================
+   PHONE INFO
+============================== */
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.phoneIcon {
+  width: 58px;
+  height: 58px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  border-radius: 50%;
+
+  color: #2563eb;
+  background: #ffffff;
+
+  font-size: 21px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+  transition: 0.3s ease;
 }
 
-.content {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.info:hover .phoneIcon {
+  transform: rotate(-10deg) scale(1.08);
 }
 
-.content p {
-    font-size: 24px;
-    font-weight: 600 !important;
-    padding: 17px 0;
-    text-transform: capitalize;
-    letter-spacing: 2px;
+.smallText {
+  margin: 0 0 4px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
 }
 
-.content p a{
- text-decoration: none;
-}
-.content p a span{
-    color: yellow;
-}
+.phone {
+  display: inline-block;
 
-.download a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #333;
-  color: white;
-  padding: 22px 16px;
+  color: #ffffff;
+
   text-decoration: none;
-  transition: background-color 0.3s ease;
+
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+
+  transition: 0.3s ease;
 }
 
-.download a:hover {
-  background-color: #0056b3;
+.phone:hover {
+  color: #bfdbfe;
 }
+
+/* ==============================
+   DOWNLOAD BOX
+============================== */
+
+.downloadBox {
+  display: flex;
+  align-items: center;
+}
+
+/* ==============================
+   DOWNLOAD BUTTON
+============================== */
+
+.downloadBtn {
+  position: relative;
+
+  min-width: 300px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 10px 14px 10px 10px;
+
+  color: #111827;
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================
+   DOWNLOAD ICON
+============================== */
 
 .icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+
+  border-radius: 11px;
+
   font-size: 18px;
+
+  transition: 0.3s ease;
 }
 
+.downloadBtn:hover .icon {
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   BUTTON TEXT
+============================== */
+
 .text {
-  font-size: 16px;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.text strong {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.text small {
+  margin-top: 2px;
+
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* ==============================
+   ARROW
+============================== */
+
+.arrow {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #2563eb;
+  background: #eff6ff;
+
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.downloadBtn:hover .arrow {
+  transform: translateX(5px);
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 768px) {
+  .brochure {
+    padding: 25px 18px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info {
+    justify-content: center;
+  }
+
+  .downloadBox {
+    justify-content: center;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 480px) {
+  .brochure {
+    padding: 22px 15px;
+  }
+
+  .info {
+    gap: 12px;
+  }
+
+  .phoneIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 17px;
+  }
+
+  .smallText {
+    font-size: 11px;
+  }
+
+  .phone {
+    font-size: 19px;
+  }
+
+  .downloadBtn {
+    min-width: 0;
+    padding: 9px;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .text strong {
+    font-size: 13px;
+  }
+
+  .text small {
+    font-size: 10px;
+  }
+
+  .arrow {
+    width: 34px;
+    height: 34px;
+  }
 }
