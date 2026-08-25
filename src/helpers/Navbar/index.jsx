@@ -1,5 +1,4 @@
 import React from "react";
-import { IoHome } from "react-icons/io5";
 import styles from "./index.module.css";
 import { Link } from "react-router";
 import logo from "../../assets/logo.png";

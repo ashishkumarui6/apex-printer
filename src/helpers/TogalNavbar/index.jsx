@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { IoHome } from "react-icons/io5";
 import { Link, useLocation } from "react-router";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -32,9 +31,7 @@ const TogalNavbar = () => {
           <ul>
             <li>
               <Link to="/">
-                <span>
-                  <IoHome size={22} />
-                </span>
+                <span>Home</span>
               </Link>
             </li>
             <li>
