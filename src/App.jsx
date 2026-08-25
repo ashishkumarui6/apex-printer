@@ -17,7 +17,6 @@ const App = () => {
       <Route path="/portfolio" element={<Public element={<Portfolio />} />} />
       <Route path="/blog" element={<Public element={<Blog />} />} />
       <Route path="/contact" element={<Public element={<Contact />} />} />
-      {/* <Route path="/printing" element={<Public element={<Printing />} />} /> */}
     </Routes>
   );
 };
