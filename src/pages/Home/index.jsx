@@ -6,7 +6,6 @@ import "./home.css";
 import OUR_PRICING from "../../components/OUR_PRICING/INDEX.JSX";
 import OUR_SERVICES from "../../components/OUR_SERVICES";
 import WHY_CHOOSE from "../../components/WHY_CHOOSE";
-import TEAM from "../TEAM";
 
 const Home = () => {
   const slides = [
