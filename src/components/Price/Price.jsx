@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.css";
-const Ourpricing = () => {
+import "./Price.css";
+const Price = () => {
   return (
     <>
       {/* ================= PRICING ================= */}
@@ -90,4 +90,4 @@ const Ourpricing = () => {
   );
 };
 
-export default Ourpricing;
+export default Price;

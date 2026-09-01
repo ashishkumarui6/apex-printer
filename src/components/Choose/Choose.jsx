@@ -1,7 +1,7 @@
 import React from "react";
-import "./index.css";
+import "./Choose.css";
 
-const WHY_CHOOSE = () => {
+const Choose = () => {
   const features = [
     {
       icon: "✓",
@@ -119,4 +119,4 @@ const WHY_CHOOSE = () => {
   );
 };
 
-export default WHY_CHOOSE;
+export default Choose;

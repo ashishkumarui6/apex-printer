@@ -1,6 +1,6 @@
 import React from "react";
 import "./portfolio.css";
-import OUR_PRICING from "../../components/Ourpricing/INDEX.JSX";
+import Price from "../../components/Price/Price.jsx";
 
 const Portfolio = () => {
   return (
@@ -233,8 +233,8 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
-      <OUR_PRICING />
+      {/* add price card  */}
+      <Price />
       {/* ================= CTA ================= */}
       <section className="cta">
         <div className="container cta-container">

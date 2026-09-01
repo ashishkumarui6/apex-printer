@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./Servicecard.css";
 
 const services = [
   {
@@ -59,7 +59,7 @@ const services = [
   },
 ];
 
-const Ourservice = () => {
+const Servicecard = () => {
   return (
     <div className="services-page">
       {/* ================= HERO ================= */}
@@ -165,4 +165,4 @@ const Ourservice = () => {
   );
 };
 
-export default Ourservice;
+export default Servicecard;
