@@ -1,0 +1,198 @@
+
+/* =========================================
+   FIXED ACTION BUTTONS
+========================================= */
+
+.action-buttons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 0;
+}
+
+/* =========================================
+   ACTION BUTTON
+========================================= */
+
+.action-btn {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+  outline: none;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  border-radius: 30px 0 0 30px;
+
+  overflow: hidden;
+
+  transition:
+    width 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow: -4px 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.action-icon {
+  min-width: 55px;
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 22px;
+
+  transition: transform 0.3s ease;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.action-text {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  transform: translateX(15px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+
+  padding-right: 18px;
+}
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.action-btn:hover {
+  width: 155px;
+  transform: translateX(-5px);
+
+  box-shadow: -8px 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.action-btn:hover .action-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.action-btn:hover .action-icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #20bd5a, #0d7d70);
+}
+
+/* =========================================
+   CALL
+========================================= */
+
+.call-btn {
+  background: linear-gradient(135deg, #2196f3, #1565c0);
+}
+
+.call-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+}
+
+/* =========================================
+   REGISTER
+========================================= */
+
+.register-btn {
+  background: linear-gradient(135deg, #ff7a18, #e91e63);
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #ff512f, #c2185b);
+}
+
+/* =========================================
+   PULSE ANIMATION
+========================================= */
+
+.whatsapp-btn .action-icon {
+  animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .action-buttons {
+    right: 0;
+    gap: 8px;
+  }
+
+  .action-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .action-icon {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .action-text {
+    font-size: 13px;
+    padding-right: 12px;
+  }
+
+  .action-btn:hover {
+    width: 130px;
+  }
+}
+

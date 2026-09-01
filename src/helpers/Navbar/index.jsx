@@ -86,9 +86,7 @@ const Navbar = () => {
               }`}
             >
               <div className={styles.menuTitle}>
-                <Link to="/services" onClick={closeMenu}>
-                  Services
-                </Link>
+                <Link onClick={closeMenu}>Services</Link>
 
                 <button
                   className={styles.dropdownBtn}

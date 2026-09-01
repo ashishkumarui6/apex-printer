@@ -67,7 +67,7 @@ const FLEX = () => {
                 Explore Services <FaArrowRight />
               </a>
 
-              <a href="tel:+919999999999" className="secondary-btn">
+              <a href="tel:+919140704566" className="secondary-btn">
                 <FaPhoneAlt /> Call Now
               </a>
             </div>
