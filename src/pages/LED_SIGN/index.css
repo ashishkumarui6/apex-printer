@@ -1,0 +1,683 @@
+* {
+  box-sizing: border-box;
+}
+
+.led-page {
+  font-family: "Poppins", sans-serif;
+  color: #111827;
+  overflow: hidden;
+}
+
+.led-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HERO ================= */
+
+.led-hero {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 50%, rgba(255, 200, 0, 0.18), transparent 28%),
+    linear-gradient(135deg, #080b14, #101522 55%, #05070c);
+  color: white;
+  overflow: hidden;
+}
+
+.led-hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(255, 204, 0, 0.12);
+  border-radius: 50%;
+  right: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.led-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+}
+
+.glow-one {
+  width: 200px;
+  height: 200px;
+  background: #ffd000;
+  right: 30%;
+  top: 15%;
+}
+
+.glow-two {
+  width: 150px;
+  height: 150px;
+  background: #ff8a00;
+  right: 8%;
+  bottom: 10%;
+}
+
+.led-hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.led-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 17px;
+  border: 1px solid rgba(255, 210, 0, 0.4);
+  border-radius: 50px;
+  color: #ffd000;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: rgba(255, 210, 0, 0.06);
+}
+
+.led-hero-text h1 {
+  font-size: clamp(45px, 6vw, 76px);
+  line-height: 1.05;
+  margin: 25px 0;
+  font-weight: 800;
+}
+
+.led-hero-text h1 span {
+  display: block;
+  color: #ffd000;
+  text-shadow: 0 0 25px rgba(255, 208, 0, 0.5);
+}
+
+.led-hero-text p {
+  max-width: 590px;
+  color: #b9c0cf;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.led-hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.led-btn {
+  text-decoration: none;
+  padding: 15px 24px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.led-btn.primary {
+  background: #ffd000;
+  color: #111;
+  box-shadow: 0 8px 30px rgba(255, 208, 0, 0.25);
+}
+
+.led-btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 208, 0, 0.4);
+}
+
+.led-btn.secondary {
+  border: 1px solid #39404e;
+  color: white;
+}
+
+.led-btn.secondary:hover {
+  border-color: #ffd000;
+  color: #ffd000;
+}
+
+.led-rating {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #9098a8;
+  font-size: 13px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  color: #ffd000;
+}
+
+/* ================= LED BOARD ================= */
+
+.led-board-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.led-board {
+  width: 420px;
+  height: 260px;
+  padding: 13px;
+  border-radius: 12px;
+  background: #15191f;
+  box-shadow:
+    0 0 15px rgba(255, 208, 0, 0.6),
+    0 0 50px rgba(255, 180, 0, 0.25),
+    inset 0 0 20px #000;
+  transform: perspective(800px) rotateY(-8deg) rotateX(3deg);
+}
+
+.led-board-border {
+  height: 100%;
+  position: relative;
+  border: 4px solid #292e35;
+  border-radius: 6px;
+  background:
+    linear-gradient(145deg, #11151b, #050609);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.led-board-content {
+  text-align: center;
+}
+
+.led-board-content small {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.led-board-content h2 {
+  margin: 12px 0;
+  font-size: 46px;
+  color: #ffd000;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 15px #ffd000,
+    0 0 35px #ff9d00;
+}
+
+.led-board-content p {
+  margin: 0;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.led-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffd000;
+  box-shadow: 0 0 12px #ffd000;
+}
+
+.dot-1 {
+  left: 15px;
+  top: 15px;
+}
+
+.dot-2 {
+  right: 15px;
+  top: 15px;
+}
+
+.dot-3 {
+  left: 15px;
+  bottom: 15px;
+}
+
+.dot-4 {
+  right: 15px;
+  bottom: 15px;
+}
+
+/* ================= SERVICES ================= */
+
+.led-services {
+  padding: 100px 0;
+  background: #f8f9fb;
+}
+
+.led-section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.led-section-heading > span {
+  color: #e6b900;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.led-section-heading h2 {
+  font-size: 42px;
+  margin: 13px 0;
+}
+
+.led-section-heading h2 strong {
+  color: #e3b800;
+}
+
+.led-section-heading p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.led-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.led-service-card {
+  position: relative;
+  padding: 32px 25px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #eceef2;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.led-service-card::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -40px;
+  top: -40px;
+  background: #ffd000;
+  border-radius: 50%;
+  opacity: 0.08;
+}
+
+.led-service-card:hover {
+  transform: translateY(-8px);
+  border-color: #ffd000;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8d6;
+  color: #e4b800;
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.led-service-card h3 {
+  margin-bottom: 12px;
+  font-size: 19px;
+}
+
+.led-service-card p {
+  color: #707784;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.service-arrow {
+  margin-top: 20px;
+  color: #d8ad00;
+}
+
+/* ================= ABOUT ================= */
+
+.led-about {
+  padding: 110px 0;
+  background: white;
+}
+
+.led-about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.led-about-visual {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-board {
+  width: 390px;
+  height: 270px;
+  padding: 12px;
+  background: #171a20;
+  border-radius: 15px;
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(255, 207, 0, 0.25);
+}
+
+.about-board-inner {
+  height: 100%;
+  border: 3px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #07090d;
+}
+
+.about-board-inner span {
+  color: white;
+  letter-spacing: 5px;
+}
+
+.about-board-inner strong {
+  font-size: 52px;
+  color: #ffd000;
+  text-shadow: 0 0 25px #ffd000;
+}
+
+.about-board-inner small {
+  color: #aaa;
+  letter-spacing: 3px;
+}
+
+.experience-card {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  padding: 20px 25px;
+  background: #ffd000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.experience-card strong {
+  font-size: 38px;
+}
+
+.experience-card span {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.led-small-title {
+  color: #d5ad00;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.led-about-content h2 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.led-about-content h2 span {
+  display: block;
+  color: #dcb300;
+}
+
+.led-about-content > p {
+  color: #697181;
+  line-height: 1.8;
+}
+
+.benefit-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.benefit-item svg {
+  color: #e2b900;
+}
+
+.led-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 13px 21px;
+  border: 1px solid #e2b900;
+  color: #b18c00;
+  border-radius: 7px;
+  font-weight: 700;
+}
+
+/* ================= PROCESS ================= */
+
+.led-process {
+  padding: 100px 0;
+  background: #f7f8fa;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-card {
+  position: relative;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #ececec;
+}
+
+.process-number {
+  font-size: 42px;
+  font-weight: 900;
+  color: #ffd000;
+  opacity: 0.8;
+}
+
+.process-card h3 {
+  margin: 10px 0;
+}
+
+.process-card p {
+  color: #737987;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ================= CTA ================= */
+
+.led-cta {
+  position: relative;
+  padding: 100px 0;
+  background: #080b11;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.led-cta-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #ffd000;
+  opacity: 0.08;
+  filter: blur(100px);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.led-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.led-cta-content > span {
+  color: #ffd000;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.led-cta h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  max-width: 750px;
+  margin: 20px auto;
+}
+
+.led-cta h2 strong {
+  display: block;
+  color: #ffd000;
+  text-shadow: 0 0 20px rgba(255, 208, 0, 0.3);
+}
+
+.led-cta p {
+  color: #aeb5c2;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.led-btn.white {
+  background: white;
+  color: #111;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .led-hero-content,
+  .led-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .led-hero {
+    padding: 100px 0;
+  }
+
+  .led-hero-text {
+    text-align: center;
+  }
+
+  .led-hero-text p {
+    margin: auto;
+  }
+
+  .led-hero-buttons,
+  .led-rating {
+    justify-content: center;
+  }
+
+  .led-service-grid,
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .led-about-visual {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .led-hero {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .led-hero-text h1 {
+    font-size: 43px;
+  }
+
+  .led-hero-text p {
+    font-size: 15px;
+  }
+
+  .led-board {
+    width: 320px;
+    height: 205px;
+  }
+
+  .led-board-content h2 {
+    font-size: 30px;
+  }
+
+  .led-section-heading h2,
+  .led-about-content h2,
+  .led-cta h2 {
+    font-size: 34px;
+  }
+
+  .led-service-grid,
+  .process-grid,
+  .benefit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .led-about-visual {
+    min-height: 330px;
+  }
+
+  .about-board {
+    width: 300px;
+    height: 210px;
+  }
+
+  .about-board-inner strong {
+    font-size: 38px;
+  }
+
+  .experience-card {
+    right: 5px;
+  }
+}

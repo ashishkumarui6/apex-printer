@@ -44,9 +44,7 @@ const Navbar = () => {
               }`}
             >
               <div className={styles.menuTitle}>
-                <Link to="/about" onClick={closeMenu}>
-                  About Us
-                </Link>
+                <Link onClick={closeMenu}>About Us</Link>
 
                 <button
                   className={styles.dropdownBtn}
@@ -69,12 +67,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/careers" onClick={closeMenu}>
+                  <Link to="/commigsoon" onClick={closeMenu}>
                     Careers
                   </Link>
                 </li>
                 <li>
-                  <Link to="/brochure" onClick={closeMenu}>
+                  <Link to="/commigsoon" onClick={closeMenu}>
                     E-Brochure
                   </Link>
                 </li>
@@ -103,18 +101,28 @@ const Navbar = () => {
 
               <ul className={styles.submenu}>
                 <li>
-                  <Link to="/printing" onClick={closeMenu}>
-                    Printing
+                  <Link to="/flex" onClick={closeMenu}>
+                    Flex Printing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/design" onClick={closeMenu}>
-                    Design
+                  <Link to="/led" onClick={closeMenu}>
+                    LED Sign Boards
                   </Link>
                 </li>
                 <li>
-                  <Link to="/delivery" onClick={closeMenu}>
-                    Delivery
+                  <Link to="/banner" onClick={closeMenu}>
+                    Banner Printing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/vinayal" onClick={closeMenu}>
+                    Vinyl Printing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/stationeryItems" onClick={closeMenu}>
+                    School & Collage Stationery Items
                   </Link>
                 </li>
               </ul>

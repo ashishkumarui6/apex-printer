@@ -158,13 +158,14 @@ const Footer = () => {
       <div className={styles.footerBottom}>
         <div className={styles.bottomContainer}>
           <p>
-            © 2025 <strong>Apex Printer</strong>. All Rights Reserved.
+            Copyright © 2025 <strong>Apex Printer</strong>. All Rights Reserved.
           </p>
 
           <div className={styles.bottomLinks}>
             <a href="#">Disclaimer</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
+            <a href="#">Design By: ESS</a>
           </div>
         </div>
       </div>

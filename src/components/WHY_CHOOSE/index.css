@@ -1,0 +1,570 @@
+
+/* =====================================================
+   WHY CHOOSE PAGE
+===================================================== */
+
+.whyChoosePage {
+  --why-primary: #ff4d00;
+  --why-primary-dark: #d93600;
+  --why-dark: #111827;
+  --why-text: #4b5563;
+  --why-light: #f8fafc;
+  --why-white: #ffffff;
+  --why-border: #e5e7eb;
+
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--why-dark);
+}
+
+.whyChooseContainer {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   WHY CHOOSE SECTION
+===================================================== */
+
+.whyChooseSection {
+  padding: 110px 0;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 77, 0, 0.06),
+      transparent 30%
+    ),
+    #f8fafc;
+}
+
+.whyChooseWrapper {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+
+/* =====================================================
+   IMAGE AREA
+===================================================== */
+
+.whyChooseImage {
+  position: relative;
+  min-height: 480px;
+}
+
+.whyChooseImageBox {
+  width: 90%;
+  height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #111827 0%,
+      #1f2937 55%,
+      #ff4d00 55%,
+      #ff7200 100%
+    );
+
+  box-shadow:
+    0 25px 60px rgba(17, 24, 39, 0.18);
+
+  position: relative;
+}
+
+.whyChooseImageBox::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -70px;
+  right: -60px;
+
+  border: 35px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.whyChooseImageBox::after {
+  content: "";
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  bottom: -60px;
+  left: -50px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   IMAGE CONTENT
+===================================================== */
+
+.whyChooseImageContent {
+  position: relative;
+  z-index: 2;
+
+  color: white;
+  text-align: center;
+}
+
+.whyChooseImageContent span {
+  display: block;
+
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+
+.whyChooseImageContent strong {
+  display: block;
+
+  margin: 5px 0;
+
+  color: #fff;
+
+  font-size: 100px;
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -5px;
+}
+
+.whyChooseImageContent small {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   EXPERIENCE BOX
+===================================================== */
+
+.whyChooseExperience {
+  position: absolute;
+
+  right: 0;
+  bottom: 25px;
+
+  width: 165px;
+
+  padding: 25px 20px;
+
+  text-align: center;
+  color: white;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--why-primary),
+      #ff7200
+    );
+
+  box-shadow:
+    0 15px 35px rgba(255, 77, 0, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.whyChooseExperience:hover {
+  transform: translateY(-7px);
+}
+
+.whyChooseExperience strong {
+  display: block;
+
+  font-size: 40px;
+  line-height: 1;
+}
+
+.whyChooseExperience span {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.whyChooseContent {
+  max-width: 650px;
+}
+
+.whyChooseLabel {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: var(--why-primary);
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.whyChooseContent h2 {
+  margin: 0;
+
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.whyChooseContent h2 span {
+  display: block;
+  color: var(--why-primary);
+}
+
+.whyChooseDescription {
+  max-width: 650px;
+
+  margin: 20px 0 35px;
+
+  color: var(--why-text);
+
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.whyChooseFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.whyChooseFeature {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+}
+
+.whyChooseFeature:hover {
+  background: white;
+
+  transform: translateX(6px);
+
+  box-shadow:
+    0 12px 30px rgba(17, 24, 39, 0.07);
+}
+
+.whyChooseFeatureIcon {
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--why-primary);
+
+  border-radius: 50%;
+
+  background: #fff0e9;
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.whyChooseFeature h4 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+}
+
+.whyChooseFeature p {
+  margin: 0;
+
+  color: var(--why-text);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   PROCESS SECTION
+===================================================== */
+
+.whyChooseProcess {
+  padding: 110px 0;
+
+  background: var(--why-white);
+}
+
+.whyChooseHeading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.whyChooseHeading span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--why-primary);
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.whyChooseHeading h2 {
+  margin: 0;
+
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   PROCESS GRID
+===================================================== */
+
+.whyChooseProcessGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.whyChooseProcessItem {
+  position: relative;
+
+  padding: 30px;
+
+  border: 1px solid var(--why-border);
+  border-radius: 16px;
+
+  background: white;
+
+  transition: 0.35s ease;
+
+  overflow: hidden;
+}
+
+.whyChooseProcessItem::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 4px;
+
+  background: var(--why-primary);
+
+  transition: 0.35s ease;
+}
+
+.whyChooseProcessItem:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255, 77, 0, 0.4);
+
+  box-shadow:
+    0 20px 45px rgba(17, 24, 39, 0.1);
+}
+
+.whyChooseProcessItem:hover::before {
+  width: 100%;
+}
+
+
+/* =====================================================
+   PROCESS NUMBER
+===================================================== */
+
+.whyChooseProcessNumber {
+  margin-bottom: 25px;
+
+  color: var(--why-primary);
+
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.whyChooseProcessItem h3 {
+  margin: 0 0 12px;
+
+  font-size: 19px;
+}
+
+.whyChooseProcessItem p {
+  margin: 0;
+
+  color: var(--why-text);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .whyChooseWrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .whyChooseImage {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .whyChooseContent {
+    max-width: 700px;
+    margin: auto;
+
+    text-align: center;
+  }
+
+  .whyChooseDescription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .whyChooseFeatures {
+    max-width: 600px;
+    margin: auto;
+
+    text-align: left;
+  }
+
+  .whyChooseProcessGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .whyChooseSection,
+  .whyChooseProcess {
+    padding: 75px 0;
+  }
+
+  .whyChooseWrapper {
+    gap: 45px;
+  }
+
+  .whyChooseImage {
+    min-height: 380px;
+  }
+
+  .whyChooseImageBox {
+    width: 100%;
+    height: 370px;
+
+    border-radius: 20px;
+  }
+
+  .whyChooseImageContent span {
+    font-size: 20px;
+  }
+
+  .whyChooseImageContent strong {
+    font-size: 80px;
+  }
+
+  .whyChooseImageContent small {
+    font-size: 9px;
+  }
+
+  .whyChooseExperience {
+    right: -5px;
+    bottom: 10px;
+
+    width: 145px;
+
+    padding: 20px 15px;
+  }
+
+  .whyChooseExperience strong {
+    font-size: 34px;
+  }
+
+  .whyChooseContent h2 {
+    font-size: 36px;
+  }
+
+  .whyChooseDescription {
+    font-size: 15px;
+  }
+
+  .whyChooseFeature {
+    padding: 12px 8px;
+  }
+
+  .whyChooseHeading {
+    margin-bottom: 40px;
+  }
+
+  .whyChooseHeading h2 {
+    font-size: 34px;
+  }
+
+  .whyChooseProcessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyChooseProcessItem {
+    padding: 25px;
+  }
+
+  .whyChooseProcessNumber {
+    font-size: 36px;
+  }
+}
+

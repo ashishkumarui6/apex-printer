@@ -1,0 +1,714 @@
+
+/* =====================================
+   VINYL PRINTING PAGE
+===================================== */
+
+.vinyl-page {
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.vinyl-container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.vinyl-hero {
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, #101010 0%, #202020 55%, #f5a900 100%);
+}
+
+.vinyl-hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  border: 70px solid rgba(255, 193, 7, 0.08);
+}
+
+.vinyl-shape-one {
+  width: 500px;
+  height: 500px;
+  right: -200px;
+  top: -200px;
+}
+
+.vinyl-shape-two {
+  width: 350px;
+  height: 350px;
+  left: -200px;
+  bottom: -220px;
+}
+
+.vinyl-hero-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.vinyl-hero-content {
+  color: white;
+}
+
+.vinyl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 17px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  background: rgba(255, 193, 7, 0.12);
+  color: #ffc107;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.vinyl-hero h1 {
+  font-size: clamp(45px, 6vw, 75px);
+  line-height: 1.03;
+  margin: 25px 0;
+  font-weight: 800;
+}
+
+.vinyl-hero h1 span {
+  color: #ffc107;
+}
+
+.vinyl-hero p {
+  max-width: 620px;
+  color: #d2d2d2;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.vinyl-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.vinyl-primary-btn,
+.vinyl-call-btn {
+  padding: 15px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.vinyl-primary-btn {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: #111;
+}
+
+.vinyl-primary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.vinyl-call-btn {
+  background: transparent;
+  border: 1px solid #666;
+  color: white;
+}
+
+.vinyl-call-btn:hover {
+  background: white;
+  color: #111;
+}
+
+.vinyl-rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 28px;
+  font-size: 13px;
+}
+
+.vinyl-stars {
+  display: flex;
+  gap: 4px;
+  color: #ffc107;
+}
+
+/* =====================================
+   HERO VINYL VISUAL
+===================================== */
+
+.vinyl-hero-preview {
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl-roll {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: #111;
+  border: 30px solid #333;
+  box-shadow:
+    20px 25px 50px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.vinyl-roll-inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ffc107;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  border: 35px solid #222;
+}
+
+.vinyl-sticker-card {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  right: 10px;
+  bottom: 50px;
+  transform: rotate(8deg);
+  background: #ffc107;
+  color: #111;
+  padding: 25px;
+  box-shadow: 15px 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+.vinyl-sticker-card span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.vinyl-sticker-card strong {
+  display: block;
+  font-size: 45px;
+  line-height: 0.95;
+  margin: 10px 0;
+}
+
+.vinyl-sticker-card small {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.vinyl-floating-card {
+  position: absolute;
+  left: 5px;
+  bottom: 40px;
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.vinyl-floating-card svg {
+  color: #ffc107;
+  font-size: 25px;
+}
+
+.vinyl-floating-card strong,
+.vinyl-floating-card small {
+  display: block;
+}
+
+.vinyl-floating-card small {
+  color: #ccc;
+  margin-top: 3px;
+}
+
+/* =====================================
+   HEADINGS
+===================================== */
+
+.vinyl-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 55px;
+}
+
+.vinyl-heading > span {
+  color: #f59e0b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vinyl-heading h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.vinyl-heading strong {
+  color: #f59e0b;
+}
+
+.vinyl-heading p {
+  color: #777;
+  line-height: 1.8;
+}
+
+/* =====================================
+   SERVICES
+===================================== */
+
+.vinyl-services {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.vinyl-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.vinyl-service-card {
+  padding: 30px 25px;
+  border: 1px solid #eee;
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.vinyl-service-card:hover {
+  transform: translateY(-8px);
+  border-color: #ffc107;
+}
+
+.vinyl-service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff4d1;
+  color: #f59e0b;
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+.vinyl-service-card h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.vinyl-service-card p {
+  color: #777;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.vinyl-service-card a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* =====================================
+   ABOUT
+===================================== */
+
+.vinyl-about {
+  padding: 100px 0;
+  background: #f7f7f7;
+}
+
+.vinyl-about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.vinyl-about-visual {
+  min-height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl-wall {
+  width: 90%;
+  height: 350px;
+  border-radius: 10px;
+  transform: rotate(-4deg);
+  background:
+    linear-gradient(135deg, #151515 0%, #252525 70%, #ffc107 70%);
+  box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.vinyl-wall-text {
+  position: absolute;
+  top: 65px;
+  left: 60px;
+  color: white;
+}
+
+.vinyl-wall-text small {
+  color: #ffc107;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.vinyl-wall-text h3 {
+  font-size: 55px;
+  line-height: 0.95;
+  margin: 15px 0;
+}
+
+.vinyl-wall-text span {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.vinyl-circle {
+  position: absolute;
+  right: 5px;
+  bottom: 20px;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotate(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.vinyl-circle strong {
+  font-size: 28px;
+}
+
+.vinyl-circle span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vinyl-small-title {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #f59e0b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.vinyl-about-content h2 {
+  font-size: clamp(35px, 4vw, 52px);
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+.vinyl-about-content h2 strong {
+  color: #f59e0b;
+  display: block;
+}
+
+.vinyl-about-content > p {
+  color: #777;
+  line-height: 1.8;
+}
+
+.vinyl-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.vinyl-feature {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+}
+
+.vinyl-feature svg {
+  color: #f59e0b;
+}
+
+/* =====================================
+   APPLICATIONS
+===================================== */
+
+.vinyl-applications {
+  padding: 100px 0;
+}
+
+.vinyl-application-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.vinyl-application {
+  padding: 35px;
+  border-radius: 15px;
+  background: #111;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.vinyl-application::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 25px solid rgba(255, 193, 7, 0.1);
+}
+
+.vinyl-application > span {
+  color: #ffc107;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.vinyl-application h3 {
+  font-size: 23px;
+  margin: 12px 0;
+}
+
+.vinyl-application p {
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 500px;
+}
+
+/* =====================================
+   PROCESS
+===================================== */
+
+.vinyl-process {
+  padding: 100px 0;
+  background: #f7f7f7;
+}
+
+.vinyl-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.vinyl-process-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #eee;
+}
+
+.vinyl-process-card > div {
+  width: 58px;
+  height: 58px;
+  margin: auto auto 20px;
+  border-radius: 50%;
+  background: #ffc107;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.vinyl-process-card h3 {
+  margin-bottom: 10px;
+}
+
+.vinyl-process-card p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* =====================================
+   CTA
+===================================== */
+
+.vinyl-cta {
+  padding: 110px 20px;
+  background: linear-gradient(135deg, #111, #242424);
+  color: white;
+  text-align: center;
+}
+
+.vinyl-cta-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.vinyl-cta-content > span {
+  color: #ffc107;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vinyl-cta h2 {
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+.vinyl-cta h2 strong {
+  color: #ffc107;
+}
+
+.vinyl-cta p {
+  color: #bbb;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 1000px) {
+  .vinyl-hero-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .vinyl-hero-content {
+    padding: 90px 0 20px;
+  }
+
+  .vinyl-hero-preview {
+    min-height: 400px;
+    padding-bottom: 70px;
+  }
+
+  .vinyl-service-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vinyl-about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .vinyl-process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .vinyl-hero h1 {
+    font-size: 43px;
+  }
+
+  .vinyl-hero p {
+    font-size: 15px;
+  }
+
+  .vinyl-buttons {
+    flex-direction: column;
+  }
+
+  .vinyl-primary-btn,
+  .vinyl-call-btn {
+    width: 100%;
+  }
+
+  .vinyl-service-grid,
+  .vinyl-application-grid,
+  .vinyl-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vinyl-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .vinyl-roll {
+    width: 220px;
+    height: 220px;
+    border-width: 22px;
+  }
+
+  .vinyl-roll-inner {
+    width: 90px;
+    height: 90px;
+    top: 43px;
+    left: 43px;
+    border-width: 25px;
+  }
+
+  .vinyl-sticker-card {
+    width: 145px;
+    height: 145px;
+    right: 0;
+  }
+
+  .vinyl-sticker-card strong {
+    font-size: 32px;
+  }
+
+  .vinyl-floating-card {
+    left: 0;
+  }
+
+  .vinyl-wall {
+    height: 280px;
+  }
+
+  .vinyl-wall-text {
+    left: 35px;
+    top: 50px;
+  }
+
+  .vinyl-wall-text h3 {
+    font-size: 42px;
+  }
+
+  .vinyl-services,
+  .vinyl-about,
+  .vinyl-applications,
+  .vinyl-process {
+    padding: 70px 0;
+  }
+}

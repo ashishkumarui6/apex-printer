@@ -3,6 +3,10 @@ import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaArrowRight, FaPrint, FaStar, FaCheckCircle } from "react-icons/fa";
 import "./home.css";
+import OUR_PRICING from "../../components/OUR_PRICING/INDEX.JSX";
+import OUR_SERVICES from "../../components/OUR_SERVICES";
+import WHY_CHOOSE from "../../components/WHY_CHOOSE";
+import TEAM from "../TEAM";
 
 const Home = () => {
   const slides = [
@@ -135,6 +139,13 @@ const Home = () => {
           ))}
         </MultiCarousel>
       </section>
+      <section>
+        <OUR_SERVICES />
+      </section>
+      <section>
+        <OUR_PRICING />
+      </section>
+      <WHY_CHOOSE />
     </main>
   );
 };

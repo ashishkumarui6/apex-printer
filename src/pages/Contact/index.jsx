@@ -21,7 +21,7 @@ const Contact = () => {
 
             <h1>
               Let's Print Your
-              <span> Ideas Into Reality</span>
+              <span>Ideas Into Reality</span>
             </h1>
 
             <p>
@@ -80,7 +80,7 @@ const Contact = () => {
               </div>
               <h3>Working Hours</h3>
               <p>09:00 AM - 07:00 PM</p>
-              <span>Saturday - Thusrsday</span>
+              <span>Saturday - Thursday</span>
             </div>
           </div>
         </div>
@@ -142,8 +142,11 @@ const Contact = () => {
 
                 <div className={styles.inputGroup}>
                   <label>Printing Service</label>
-                  <select>
-                    <option>Select Service</option>
+
+                  <select defaultValue="">
+                    <option value="" disabled>
+                      Select Service
+                    </option>
                     <option>Flex Printing</option>
                     <option>Vinyl Printing</option>
                     <option>Banner Printing</option>
@@ -156,6 +159,7 @@ const Contact = () => {
 
               <div className={styles.inputGroup}>
                 <label>Message</label>
+
                 <textarea
                   rows="5"
                   placeholder="Tell us about your printing requirement..."
@@ -177,7 +181,9 @@ const Contact = () => {
           <div className={styles.ctaBox}>
             <div>
               <span>READY TO PRINT?</span>
+
               <h2>Let's Create Something Amazing!</h2>
+
               <p>
                 From small banners to large outdoor hoardings, we provide
                 complete printing solutions.
@@ -185,6 +191,37 @@ const Contact = () => {
             </div>
 
             <button className={styles.ctaButton}>Call Now</button>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= LOCATION ================= */}
+      <section className={styles.locationSection}>
+        <div className={styles.container}>
+          <div className={styles.locationContainer}>
+            <div className={styles.locationMap}>
+              <div className={styles.mapOverlay}>
+                <div className={styles.mapPin}>
+                  <FaMapMarkerAlt />
+                </div>
+
+                <h3>Find Us Here</h3>
+
+                <p>Your Printing Studio</p>
+
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://www.google.com/maps/dir/28.4438166,77.0211752/Shiv+Mandir+BHEL,+FHV2%2BHGX,+Township,+Jagdishpur,+Kamrauli,+Uttar+Pradesh+227817/@26.916121,70.1539776,5z/data=!4m10!4m9!1m1!4e1!1m5!1m1!1s0x399a4be590ac93b7:0x64efffb83fff8b08!2m2!1d81.5513794!2d26.4939752!3e9?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
+                >
+                  Get Directions →
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
