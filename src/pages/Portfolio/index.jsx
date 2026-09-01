@@ -51,7 +51,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="hero-image">
+          <div className="hero-image_leftbox">
             <div className="hero-card">
               <div className="print-icon">🖨️</div>
 

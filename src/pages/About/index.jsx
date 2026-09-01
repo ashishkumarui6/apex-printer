@@ -25,7 +25,7 @@ const About = () => {
             </a>
           </div>
 
-          <div className="hero-image">
+          <div className="hero-image_leftbox">
             <div className="image-box">
               <div className="image-content">
                 <span>Smart</span>
@@ -197,7 +197,10 @@ const About = () => {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="cta-section">
+      <section
+        style={{ backgroundColor: "#ff4b2b", padding: "10px" }}
+        className="cta-section"
+      >
         <div className="container cta">
           <div>
             <span className="section-label">LET'S WORK TOGETHER</span>

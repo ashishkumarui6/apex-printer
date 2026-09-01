@@ -1,84 +1,154 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./index.module.css";
 import { Link } from "react-router";
 import logo from "../../assets/logo.png";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setAboutOpen(false);
+    setServicesOpen(false);
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <div className={styles.left}>
-          <div className={styles.logo}>
-            <Link to={"/"}>
-              <img src={logo} alt="logo" />
-            </Link>
-          </div>
+        {/* Logo */}
+        <div className={styles.logo}>
+          <Link to="/" onClick={closeMenu}>
+            <img src={logo} alt="Company Logo" />
+          </Link>
         </div>
-        <div className={styles.right}>
-          <ul>
+
+        {/* Desktop / Mobile Menu */}
+        <div
+          className={`${styles.right} ${menuOpen ? styles.mobileMenuOpen : ""}`}
+        >
+          <ul className={styles.navList}>
+            {/* Home */}
+            <li>
+              <Link to="/" onClick={closeMenu}>
+                Home
+              </Link>
+            </li>
+
+            {/* About */}
             <li
-              style={{
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+              className={`${styles.dropdown} ${
+                aboutOpen ? styles.dropdownOpen : ""
+              }`}
             >
-              <Link to="/">
-                <span>HOME</span>
-              </Link>
-            </li>
-            <li className={styles.active_li}>
-              <Link to="/about">
-                <span>About Us</span>
-              </Link>
+              <div className={styles.menuTitle}>
+                <Link to="/about" onClick={closeMenu}>
+                  About Us
+                </Link>
+
+                <button
+                  className={styles.dropdownBtn}
+                  onClick={() => setAboutOpen(!aboutOpen)}
+                  aria-label="Toggle About Us menu"
+                >
+                  <FaChevronDown />
+                </button>
+              </div>
+
               <ul className={styles.submenu}>
                 <li>
-                  <Link to="/printing">About Us</Link>
+                  <Link to="/about" onClick={closeMenu}>
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/printing">Team</Link>
+                  <Link to="/team" onClick={closeMenu}>
+                    Team
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/printing">Careers</Link>
+                  <Link to="/careers" onClick={closeMenu}>
+                    Careers
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/printing">E-Brochure</Link>
+                  <Link to="/brochure" onClick={closeMenu}>
+                    E-Brochure
+                  </Link>
                 </li>
               </ul>
             </li>
-            <li className={styles.active_li}>
-              <Link to="/services">
-                <span>Services</span>
-              </Link>
+
+            {/* Services */}
+            <li
+              className={`${styles.dropdown} ${
+                servicesOpen ? styles.dropdownOpen : ""
+              }`}
+            >
+              <div className={styles.menuTitle}>
+                <Link to="/services" onClick={closeMenu}>
+                  Services
+                </Link>
+
+                <button
+                  className={styles.dropdownBtn}
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  aria-label="Toggle Services menu"
+                >
+                  <FaChevronDown />
+                </button>
+              </div>
+
               <ul className={styles.submenu}>
                 <li>
-                  <Link to="/printing">Printing</Link>
+                  <Link to="/printing" onClick={closeMenu}>
+                    Printing
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/printing">Design</Link>
+                  <Link to="/design" onClick={closeMenu}>
+                    Design
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/printing">Delivery</Link>
+                  <Link to="/delivery" onClick={closeMenu}>
+                    Delivery
+                  </Link>
                 </li>
               </ul>
             </li>
+
+            {/* Other Links */}
             <li>
-              <Link to="/portfolio">
-                <span>Portfolio</span>
+              <Link to="/portfolio" onClick={closeMenu}>
+                Portfolio
               </Link>
             </li>
+
             <li>
-              <Link to="/blog">
-                <span>Blog</span>
+              <Link to="/blog" onClick={closeMenu}>
+                Blog
               </Link>
             </li>
+
             <li>
-              <Link to="/contact">
-                <span>Contact</span>
+              <Link to="/contact" onClick={closeMenu}>
+                <span className={styles.contactBtn}>Contact</span>
               </Link>
             </li>
           </ul>
         </div>
+
+        {/* Mobile Button */}
+        <button
+          className={styles.mobileToggle}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
     </nav>
   );
