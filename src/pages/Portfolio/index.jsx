@@ -1,6 +1,6 @@
 import React from "react";
 import "./portfolio.css";
-import OUR_PRICING from "../../components/OUR_PRICING/INDEX.JSX";
+import OUR_PRICING from "../../components/Ourpricing/INDEX.JSX";
 
 const Portfolio = () => {
   return (

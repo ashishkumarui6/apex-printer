@@ -59,7 +59,7 @@ const services = [
   },
 ];
 
-const OUR_SERVICES = () => {
+const Ourservice = () => {
   return (
     <div className="services-page">
       {/* ================= HERO ================= */}
@@ -165,4 +165,4 @@ const OUR_SERVICES = () => {
   );
 };
 
-export default OUR_SERVICES;
+export default Ourservice;

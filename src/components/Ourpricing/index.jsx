@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-const OUR_PRICING = () => {
+const Ourpricing = () => {
   return (
     <>
       {/* ================= PRICING ================= */}
@@ -90,4 +90,4 @@ const OUR_PRICING = () => {
   );
 };
 
-export default OUR_PRICING;
+export default Ourpricing;
