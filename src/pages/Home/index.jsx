@@ -94,7 +94,7 @@ const Home = () => {
                     <span>{slide.tag}</span>
                   </div>
 
-                  <h1>
+                  <h1 style={{ color: "white" }}>
                     {slide.title}
                     <br />
                     <span>{slide.highlight}</span>

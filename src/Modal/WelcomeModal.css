@@ -1,0 +1,594 @@
+/* ================================
+   OVERLAY
+================================ */
+
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(99, 102, 241, 0.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(236, 72, 153, 0.3),
+      transparent 35%
+    ),
+    rgba(5, 8, 20, 0.82);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  animation: overlayShow 0.5s ease;
+}
+
+
+/* ================================
+   MODAL
+================================ */
+
+.welcome-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 480px;
+
+  padding: 42px 38px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.06)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  color: white;
+
+  animation: modalShow 0.6s cubic-bezier(.17,.67,.35,1.3);
+}
+
+
+/* ================================
+   CLOSE BUTTON
+================================ */
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  font-size: 25px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg) scale(1.1);
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.modal-content {
+  text-align: center;
+}
+
+
+/* ================================
+   WELCOME ICON
+================================ */
+
+.welcome-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 24px;
+
+  font-size: 38px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #a855f7,
+      #ec4899
+    );
+
+  box-shadow:
+    0 15px 40px rgba(168, 85, 247, 0.4);
+
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+
+/* ================================
+   BADGE
+================================ */
+
+.badge {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+  margin-bottom: 14px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.modal-content h1 {
+  margin: 0 0 14px;
+
+  font-size: 31px;
+  line-height: 1.2;
+}
+
+.modal-content h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #818cf8,
+      #c084fc,
+      #f472b6
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.modal-content h2 {
+  margin: 15px 0 10px;
+
+  font-size: 28px;
+}
+
+.modal-content p {
+  margin: 0 auto 25px;
+
+  max-width: 370px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin: 25px 0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 15px;
+
+  text-align: left;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateX(6px);
+
+  background: rgba(255, 255, 255, 0.11);
+
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.feature > span {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.35),
+      rgba(236, 72, 153, 0.35)
+    );
+
+  font-size: 19px;
+}
+
+.feature strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 14px;
+}
+
+.feature small {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 12px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.continue-btn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px 20px;
+
+  border: none;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6,
+      #ec4899
+    );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px rgba(139, 92, 246, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+.continue-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(139, 92, 246, 0.45);
+}
+
+.continue-btn span {
+  transition: transform 0.3s ease;
+}
+
+.continue-btn:hover span {
+  transform: translateX(5px);
+}
+
+
+/* ================================
+   SKIP
+================================ */
+
+.skip-btn {
+  margin-top: 16px;
+
+  border: none;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.skip-btn:hover {
+  color: white;
+}
+
+
+/* ================================
+   LOADER
+================================ */
+
+.loader-wrapper {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+
+  margin: 10px auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50%;
+
+  border: 4px solid rgba(255, 255, 255, 0.1);
+
+  border-top-color: #a78bfa;
+  border-right-color: #ec4899;
+
+  animation: spin 1s linear infinite;
+}
+
+.loader-wrapper span {
+  font-size: 30px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+
+  margin: 20px 0;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6366f1,
+      #c084fc,
+      #ec4899
+    );
+
+  animation: progress 2.2s ease forwards;
+}
+
+.modal-content small {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ================================
+   SUCCESS
+================================ */
+
+.success-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 10px auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #10b981,
+      #22c55e
+    );
+
+  font-size: 48px;
+  font-weight: bold;
+
+  box-shadow:
+    0 15px 40px rgba(34, 197, 94, 0.35);
+
+  animation: successPop 0.5s ease;
+}
+
+.success-content h2 {
+  color: #86efac;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalShow {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .welcome-overlay {
+    padding: 15px;
+  }
+
+  .welcome-modal {
+    max-width: 100%;
+
+    padding: 35px 22px 28px;
+
+    border-radius: 23px;
+  }
+
+  .modal-content h1 {
+    font-size: 25px;
+  }
+
+  .modal-content h2 {
+    font-size: 24px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  .welcome-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 30px;
+  }
+
+  .feature {
+    padding: 11px;
+  }
+
+  .feature > span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .close-btn {
+    top: 12px;
+    right: 12px;
+
+    width: 34px;
+    height: 34px;
+  }
+}

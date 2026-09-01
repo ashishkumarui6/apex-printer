@@ -48,7 +48,7 @@ const Header = () => {
             <FaLinkedinIn />
           </a>
 
-          <Link to="/payment" className={styles.payButton}>
+          <Link to="/Payment" className={styles.payButton}>
             PAY NOW
           </Link>
         </div>

@@ -1,166 +1,281 @@
 
 /* =========================================
-   FIXED ACTION BUTTONS
+   FLOATING ACTION MENU
 ========================================= */
 
-.action-buttons {
+.action-wrapper {
   position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 9999;
+  right: 25px;
+  bottom: 25px;
+  z-index: 99999;
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
-
-  padding: 0;
+  align-items: flex-end;
 }
 
 /* =========================================
-   ACTION BUTTON
+   OPTIONS CONTAINER
 ========================================= */
 
-.action-btn {
-  width: 55px;
-  height: 55px;
+.action-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 13px;
 
+  margin-bottom: 15px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(25px) scale(0.8);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    visibility 0.3s ease;
+}
+
+/* Open State */
+
+.action-wrapper.open .action-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================
+   ACTION ITEM
+========================================= */
+
+.action-item {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
 
   border: none;
-  outline: none;
+  background: transparent;
+
   text-decoration: none;
 
   cursor: pointer;
 
-  border-radius: 30px 0 0 30px;
+  font-family: inherit;
 
-  overflow: hidden;
+  padding: 0;
 
-  transition:
-    width 0.35s ease,
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.25s ease;
+}
 
-  box-shadow: -4px 5px 18px rgba(0, 0, 0, 0.18);
+.action-item:hover {
+  transform: translateX(-5px);
 }
 
 /* =========================================
-   ICON
+   LABEL
 ========================================= */
 
-.action-icon {
-  min-width: 55px;
-  width: 55px;
-  height: 55px;
+.action-label {
+  background: #ffffff;
+
+  color: #222;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  padding: 9px 15px;
+
+  border-radius: 25px;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+
+  transform: translateX(10px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.action-item:hover .action-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =========================================
+   ICON CIRCLE
+========================================= */
+
+.action-circle {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #ffffff;
+  color: white;
+
   font-size: 22px;
 
-  transition: transform 0.3s ease;
-}
-
-/* =========================================
-   TEXT
-========================================= */
-
-.action-text {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
-
-  white-space: nowrap;
-
-  opacity: 0;
-  transform: translateX(15px);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
 
   transition:
-    opacity 0.25s ease,
-    transform 0.3s ease;
-
-  padding-right: 18px;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* =========================================
-   HOVER EFFECT
-========================================= */
+.action-item:hover .action-circle {
+  transform: scale(1.12) rotate(5deg);
 
-.action-btn:hover {
-  width: 155px;
-  transform: translateX(-5px);
-
-  box-shadow: -8px 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-.action-btn:hover .action-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.action-btn:hover .action-icon {
-  transform: rotate(-8deg) scale(1.1);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================================
    WHATSAPP
 ========================================= */
 
-.whatsapp-btn {
-  background: linear-gradient(135deg, #25d366, #128c7e);
-}
-
-.whatsapp-btn:hover {
-  background: linear-gradient(135deg, #20bd5a, #0d7d70);
+.whatsapp .action-circle {
+  background: linear-gradient(
+    135deg,
+    #25d366,
+    #128c7e
+  );
 }
 
 /* =========================================
    CALL
 ========================================= */
 
-.call-btn {
-  background: linear-gradient(135deg, #2196f3, #1565c0);
-}
-
-.call-btn:hover {
-  background: linear-gradient(135deg, #1976d2, #0d47a1);
+.call .action-circle {
+  background: linear-gradient(
+    135deg,
+    #2196f3,
+    #1565c0
+  );
 }
 
 /* =========================================
    REGISTER
 ========================================= */
 
-.register-btn {
-  background: linear-gradient(135deg, #ff7a18, #e91e63);
-}
-
-.register-btn:hover {
-  background: linear-gradient(135deg, #ff512f, #c2185b);
+.register .action-circle {
+  background: linear-gradient(
+    135deg,
+    #ff9800,
+    #f4511e
+  );
 }
 
 /* =========================================
-   PULSE ANIMATION
+   MAIN TOGGLE BUTTON
 ========================================= */
 
-.whatsapp-btn .action-icon {
-  animation: whatsappPulse 2s infinite;
+.main-toggle {
+  width: 64px;
+  height: 64px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6c5ce7,
+      #8e44ad
+    );
+
+  box-shadow:
+    0 10px 30px rgba(108, 92, 231, 0.45);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-@keyframes whatsappPulse {
+/* Hover */
+
+.main-toggle:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(108, 92, 231, 0.55);
+}
+
+/* =========================================
+   TOGGLE ICON
+========================================= */
+
+.toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.action-wrapper.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   PULSE EFFECT
+========================================= */
+
+.main-toggle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(108, 92, 231, 0.5);
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    transform: scale(1);
+    opacity: 0.8;
   }
 
   70% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    transform: scale(1.35);
+    opacity: 0;
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    transform: scale(1.35);
+    opacity: 0;
   }
 }
 
@@ -169,30 +284,45 @@
 ========================================= */
 
 @media (max-width: 600px) {
-  .action-buttons {
-    right: 0;
-    gap: 8px;
+  .action-wrapper {
+    right: 15px;
+    bottom: 18px;
   }
 
-  .action-btn {
+  .main-toggle {
+    width: 58px;
+    height: 58px;
+  }
+
+  .main-toggle::before {
+    width: 58px;
+    height: 58px;
+  }
+
+  .action-circle {
     width: 48px;
     height: 48px;
+
+    font-size: 20px;
   }
 
-  .action-icon {
-    min-width: 48px;
-    width: 48px;
-    height: 48px;
-    font-size: 19px;
-  }
-
-  .action-text {
+  .action-label {
     font-size: 13px;
-    padding-right: 12px;
+    padding: 8px 12px;
   }
 
-  .action-btn:hover {
-    width: 130px;
+  .action-options {
+    gap: 10px;
   }
 }
 
+/* =========================================
+   MOBILE LABEL ALWAYS VISIBLE
+========================================= */
+
+@media (max-width: 600px) {
+  .action-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
